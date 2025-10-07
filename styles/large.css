@@ -1,0 +1,104 @@
+@media screen and (min-width : 1025px) {
+
+    header, main, nav, footer{
+        margin : 0 auto;
+    }
+
+    header{
+        grid-template-columns: 200px auto 500px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .nav{
+        display: block;
+    }
+
+    .nav ul{
+        display: flex;
+        padding-bottom: 15px;
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    footer .col{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cards {
+        display: grid;
+        grid-column: 1/-1;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    #box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+/* Medium screen */
+@media screen and (min-width : 641px) and (max-width : 1024px) {
+
+    #cards div{
+        grid-template-areas: 
+        "name"
+        "author"
+        "description"
+        "rating"
+        "photo"
+        "button";
+    }
+
+    #cards div h2{
+        margin: 1rem 10px; 
+        grid-area: name;
+    }
+
+    #cards div img{
+        grid-area: photo;
+    }
+
+    #cards div.description{
+        margin: 1rem 10px;
+        grid-area: description;
+    }
+
+    #cards div.rating {
+        margin: 1rem 10px;
+        grid-area: rating;
+    }
+
+    #cards div h3{
+        margin: 1rem 10px;
+        grid-area: author;
+    }
+
+    #cards div button {
+        grid-area: button;
+    }
+
+    #cards div{
+        grid-template-areas: 
+        "photo name"
+        "photo author"
+        "photo description"
+        "photo rating"
+        "button button";
+    }
+
+    #cards div img:hover{
+       box-shadow: 0 0 50px #333;
+    }
+
+}
