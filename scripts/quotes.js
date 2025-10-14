@@ -1,17 +1,16 @@
 const cards = document.querySelector('#cards');
 
 async function getDailyQuotes() {
-  const url = 'https://api.allorigins.win/get?url=https://favqs.com/api/qotd';
+  const url = 'https://poetrydb.org/random';
 
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Response Status: ${response.status}`);
     }
-
     const data = await response.json();
-    const quoteData = JSON.parse(data.contents); // FavQs response inside `contents`
-    displayQuotes([quoteData.quote]); // wrap in array for displayQuotes
+    const randomPoem = data[Math.floor(Math.random() * data.length)];
+    displayQuotes([randomPoem]);
 
   } catch (error) {
     console.error(error.message);
@@ -25,9 +24,9 @@ function displayQuotes(quotes) {
     const quoteCard = document.createElement('div');
     quoteCard.classList.add('quote-card');
     quoteCard.innerHTML = `
-      <p>"${q.body}"</p>
+      <p>${q.lines.slice(0,3).join('<br>')}</p> 
       <small>— ${q.author || 'Unknown'}</small>
-    `;
+    `;//<div class="poem-lines">${poem.lines.slice(0, 3).join('<br>')}...</div>
     cards.appendChild(quoteCard);
   });
 }

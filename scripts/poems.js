@@ -3,12 +3,12 @@ const cards = document.querySelector('#cards');
 
 // Curated list of popular poets from PoetryDB
 const popularPoets = [
-  "William Shakespeare", "Emily Dickinson", "Robert Frost", 
-  "Walt Whitman", "William Wordsworth", "John Keats",
-  "Percy Bysshe Shelley", "Alfred Lord Tennyson", "William Blake",
-  "John Milton", "Samuel Taylor Coleridge", "William Butler Yeats",
-  "T. S. Eliot", "Ezra Pound", "Wallace Stevens", "Maya Angelou",
-  "Langston Hughes", "Sylvia Plath", "Pablo Neruda", "E. E. Cummings"
+  "William Shakespeare", "Edgar Allan Poe", "Emily Dickinson", 
+  "William Wordsworth", "Robert Frost", "John Keats",
+  "Percy Bysshe Shelley", "James Thomson", "William Blake",
+  "Elizabeth Barrett Browning", "Robert Browning", "Samuel Taylor Coleridge",
+  "William Blake", "John Milton", "Oscar Wilde", "Lord Alfred Tennyson",
+  "Geoffrey Chaucer", "Alexander Pope", "Emily Bronte", "Christina Rossetti"
 ];
 
 function displayPoets() {
@@ -26,7 +26,6 @@ function displayPoets() {
 
 async function getAuthorPoems(authorName) {
   try {
-    // No proxy needed for this endpoint - it has proper CORS headers
     const url = `https://poetrydb.org/author/${encodeURIComponent(authorName)}`;
     const response = await fetch(url);
     
@@ -62,11 +61,13 @@ function displayAuthorPoems(poems, authorName) {
 
 function showFullPoem(poem) {
   cards.innerHTML = `
+    <div class="poem-wrapper">
     <button onclick="getAuthorPoems('${poem.author}')">← Back to Poems</button>
     <h2>${poem.title}</h2>
     <h3>By ${poem.author}</h3>
     <div class="poem-content">
       ${poem.lines.join('<br>')}
+    </div>
     </div>
   `;
 }

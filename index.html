@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Explore trending books, find your next read, and join a vibrant community of book lovers at Literary Escape. Start your reading journey today!">
+        <meta name="description" content="Find a poetry book that speaks to you and sign up to recieve personalised recommendations. Start your reading journey today!">
         <meta name="author" content="Boiketlo Nzimande">
-        <meta property="og:title" content="Literary Escape | Home Page">
-        <meta property="og:description" content="Explore trending books, find your next read, and join a vibrant community of book lovers at Literary Escape. Start your reading journey today!">
+        <meta property="og:title" content="The Poet's Shelf | Home Page">
+        <meta property="og:description" content="Explore trending poetry books, find your next read, and join a vibrant community at The Poet's Shelf. Start your reading journey today!">
         <meta property="og:image" content="https://Boiketlo20.github.io/wdd231/finalproject/images/brown-artsy-book-loyalty-card.png"> 
-        <meta property="og:url" content="https://Boiketlo20.github.io/wdd231/finalproject/index.html">
+        <meta property="og:url" content="https://Boiketlo20.github.io/the-poets-shelf/index.html">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-        <title>The Poets Shelf | Home Page</title>
+        <title>The Poet's Shelf | Home Page</title>
         <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" href="styles/large.css">
         <script src="scripts/navigation.js" defer></script>
@@ -21,14 +21,14 @@
     </head>
     <body>
         <header>
-            <img src="images/Pastel Cute Woman Writer Poet Quote Desktop wallpaper.svg" alt="logo icon" loading="lazy"> 
-            <span>The Poets Shelf</span>
+            <img src="images/poets-shelf-logo.svg" alt="logo icon" loading="lazy"> 
+            <span>The Poet's Shelf</span>
             <button id="hambtn" class="hamburger" aria-label="Menu"></button>
             <nav id="menu" class="nav">
                 <ul>
                     <li class="active"><a href="index.html" >Home</a>
-                    <li><a href="find-poet.html">Poetry Books</a></li>
-                    <li><a href="poems.html">Poets</a></li>
+                    <li><a href="poetry-books.html">Poetry Books</a></li>
+                    <li><a href="poets.html">Poets</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,18 +37,18 @@
                 <div class="hero-img"> </div>
                 <div class="hero-text">
                     <h1>Your Next Great Read Lives Here</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maiores eligendi hic pariatur? Ratione, sequi iusto voluptates cumque deleniti magnam rem totam minus non fugiat, hic ab, inventore commodi similique necessitatibus! Quasi rerum, iure ut voluptatum exercitationem alias saepe quibusdam.</p>
-                    <a href="find-book.html" class="cta-btn" aria-label="Find books">Find Book</a>
+                    <p>Welcome to your complete poetry companion, a digital sanctuary for verse lovers. Read full poems from centuries of literary tradition, discover fascinating poets and their inspirations, and easily shop for physical books to grow your personal poetry library. Whether you're a seasoned reader or new to verse, there's always something beautiful to discover.</p>
+                    <a href="poetry-books.html" class="cta-btn" aria-label="start reading">Start Reading</a>
                 </div>
             </div>
-            <h2>Quote Of The Day</h2>
+            <h2>Whispers of Poetry</h2>
             <div id="cards"></div>
              <h1 class="book-title">Sign up to Recieve Personalized Recommendations</h1>
                 <div class="form-area">
-                    <form method="GET" action="welcome.html" onsubmit="return setTimestamp()" >
+                    <form method="GET" action="confirmation.html" onsubmit="return setTimestamp()" >
                         <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
                         <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                        <label>Favourite Author <input type="text" name="author" required autocomplete="author-name"></label>
+                        <label>Favourite Poet <input type="text" name="author" required autocomplete="author-name"></label>
                         <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
                         <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="+27-55-760-1234" ></label>
 
