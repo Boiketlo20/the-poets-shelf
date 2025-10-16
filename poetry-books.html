@@ -12,11 +12,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>The Poets Shelf | Find Your Next Favorite Read</title>
         <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" href="styles/large.css">
         <script src="scripts/navigation.js" defer></script>
-        <script src="scripts/find-poet.js" defer></script>
+        <script type="module" src="scripts/poetry-books.mjs" ></script>
+        <script type="module" src="scripts/filter.mjs" ></script>
         <link rel="icon" href="favicon.ico">
     </head>
     <body>
@@ -29,6 +31,7 @@
                     <li><a href="index.html" >Home</a>
                     <li  class="active"><a href="poetry-books.html">Poetry Books</a></li>
                     <li><a href="poets.html">Poets</a></li>
+                    <li> <a href="cart.html"> <i style="font-size:24px" class="fa">&#xf07a;</i> </a> </li>
                 </ul>
             </nav>
         </header>
@@ -36,10 +39,18 @@
             <h1 class="book-title">Browse & Explore Our Poetry Collection </h1>
             <div>
                 <button id="all" aria-label="Show all books">All</button>
-                <button id="romance" aria-label="Filter romance books">Newest</button>
-                <button id="selfHelp" aria-label="Filter self-help books">Oldest</button>
+                <button id="new" aria-label="Filter newest books">Newest</button>
+                <button id="old" aria-label="Filter oldest books">Oldest</button>
+                <button id="sale" aria-label="Filter books on sale">For Sale</button>
             </div>
             <div id="cards" ></div>
+            <div id="modal" class="modal hidden">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="col">

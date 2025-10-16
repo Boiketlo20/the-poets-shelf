@@ -4,9 +4,9 @@ const cards = document.querySelector('#cards');
 // Curated list of popular poets from PoetryDB
 const popularPoets = [
   "William Shakespeare", "Edgar Allan Poe", "Emily Dickinson", 
-  "William Wordsworth", "Robert Frost", "John Keats",
+  "William Wordsworth", "Paul Laurence Dunbar", "John Keats",
   "Percy Bysshe Shelley", "James Thomson", "William Blake",
-  "Elizabeth Barrett Browning", "Robert Browning", "Samuel Taylor Coleridge",
+  "Elizabeth Barrett Browning", "Robert Browning", "Phillis Wheatley",
   "William Blake", "John Milton", "Oscar Wilde", "Lord Alfred Tennyson",
   "Geoffrey Chaucer", "Alexander Pope", "Emily Bronte", "Christina Rossetti"
 ];
