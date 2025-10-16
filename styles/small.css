@@ -240,13 +240,6 @@ select {
   width: 250px;
 }
 
-input[type="radio"],
-input[type=checkbox] {
-  width: 15px;
-  height: 15px;
-  padding: 12px;
-}
-
 input:required {
   border-left-color: #d70000;
 }
@@ -293,7 +286,7 @@ input[type=submit] {
   gap: 20px;
 }
 
-#box {
+.poets-style {
   animation-duration: 3s;
   animation-name: slide-in;
   max-width: 100%;
