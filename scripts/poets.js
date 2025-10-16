@@ -1,7 +1,6 @@
-
 const cards = document.querySelector('#cards');
 
-// Curated list of popular poets from PoetryDB
+//List of popular poets from PoetryDB API
 const popularPoets = [
   "William Shakespeare", "Edgar Allan Poe", "Emily Dickinson", 
   "William Wordsworth", "Paul Laurence Dunbar", "John Keats",
@@ -26,7 +25,7 @@ function displayPoets() {
 
 async function getAuthorPoems(authorName) {
   try {
-    const url = `https://poetrydb.org/author/${encodeURIComponent(authorName)}`;
+    const url = `https://poetrydb.org/author/${authorName}`;
     const response = await fetch(url);
     
     if (!response.ok) throw new Error('Failed to fetch poems');
@@ -72,5 +71,4 @@ function showFullPoem(poem) {
   `;
 }
 
-// Initialize
 displayPoets();

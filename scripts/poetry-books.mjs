@@ -64,7 +64,7 @@ function displayBooks(books) {
     if (sale && sale.listPrice) {
     price.textContent = `Price: ${sale.listPrice.amount} ${sale.listPrice.currencyCode}`;
     } else {
-    price.textContent = 'Price not available';
+    price.textContent = 'NOT FOR SALE';
     }
 
     card.appendChild(title);

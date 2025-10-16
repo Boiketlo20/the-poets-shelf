@@ -1,18 +1,7 @@
 const getString = window.location.search;
-//console.log(getString);
 
 const myInfo = new URLSearchParams(getString);
 const selectedForums = [];
-for (const [key, value] of myInfo.entries()) {
-  if (key.startsWith('forum') && value) {
-    selectedForums.push(value);
-  }
-}
-
-const forumsDisplay = selectedForums.length > 0 
-  ? selectedForums.join(', ') 
-  : "None selected";
-
 
 document.querySelector('#results').innerHTML = `
   <p>Your story begins here, ${myInfo.get('first')} ${myInfo.get('last')}!</p>

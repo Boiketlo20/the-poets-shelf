@@ -27,7 +27,7 @@ export function getTotal() {
 }
 
 
-/// 🔹 Display cart items (for cart.html)
+//Display cart items
 export function displayCart() {
   const cartContainer = document.querySelector(".product-list");
   const cartMessage = document.querySelector("#cart-message");
@@ -63,12 +63,12 @@ export function displayCart() {
   document.querySelectorAll(".remove-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       removeFromCart(e.target.dataset.id);
-      displayCart(); // refresh display
+      displayCart();
     });
   });
 }
 
-// If this page is cart.html, display the cart
+//Display the cart
 if (document.body.contains(document.querySelector(".product-list"))) {
   displayCart();
 }

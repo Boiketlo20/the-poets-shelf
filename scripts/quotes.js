@@ -26,7 +26,7 @@ function displayQuotes(quotes) {
     quoteCard.innerHTML = `
       <p>${q.lines.slice(0,3).join('<br>')}</p> 
       <small>— ${q.author || 'Unknown'}</small>
-    `;//<div class="poem-lines">${poem.lines.slice(0, 3).join('<br>')}...</div>
+    `;
     cards.appendChild(quoteCard);
   });
 }
